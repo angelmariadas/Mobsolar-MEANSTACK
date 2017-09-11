@@ -16,7 +16,7 @@ app.use('/api',appRoutes);//Use the routes in api.js
 
 //http://localhost:3030/api/users
 //solarcoin -db name
-mongoose.connect('mongodb://localhost:27017/solarcoin',function(err) {
+mongoose.connect('mongodb://angel:angel@ds129394.mlab.com:29394/solarcoin',function(err) {
 	if(err) {
 		console.log('Not connected to the database'+ err);
 	} else { 

@@ -1,0 +1,286 @@
+<div class="row" >
+ <div class="col-xs-15 col-sm-20 col-md-9 col-sm-offset-1 col-md-offset-1">
+
+	<h1 class="text-center">Edit Details</h1>
+
+	<br>
+	<ul class="nav nav-tabs">
+		<li role="presentation" ng-click="edit.mailPhase();" ng-class="mailTab"><a href="#">E-mail</a></li>
+		<li role="presentation" ng-click="edit.addressPhase();" ng-class="addressTab"><a href="#">Address</a></li>
+		<li role="presentation" ng-click="edit.datePhase();" ng-class="dateTab"><a href="#">Install Date</a></li>
+		<li role="presentation" ng-click="edit.countryPhase();" ng-class="countryTab"><a href="#">Country Code</a></li>
+		<li role="presentation" ng-click="edit.useridPhase();" ng-class="useridTab"><a href="#">User ID</a></li>
+		<li role="presentation" ng-click="edit.inverterPhase();" ng-class="inverterTab"><a href="#">Inverter</a></li>
+		<li role="presentation" ng-click="edit.capacityPhase();" ng-class="capacityTab"><a href="#">Nameplate Capacity</a></li>
+		<li role="presentation" ng-click="edit.latitudePhase();" ng-class="latitudeTab"><a href="#">Latitude</a></li>
+		<li role="presentation" ng-click="edit.longtitudePhase();" ng-class="longtitudeTab"><a href="#">Longtitude</a></li>
+
+	</ul>
+
+
+	<!-- Phase One : E-mail -->
+<form name="edit.mailForm" ng-show="edit.phase1" ng-submit="edit.updateMail(newmail);">
+	<div class="row"></div>
+
+	<div class="row">
+				
+					<div class="form-group input-lg">
+                        <label>Email Address:</label>
+
+					</div>
+					
+	<div class="col-xs-1 col-sm-4 col-md-4">
+        <input type="email" name="email" class="form-control " id="email" ng-model="newmail" tabindex="1">
+       </div>
+
+       <div class="col-xs-4 col-sm-2">
+				<button type="submit" class="btn btn-theme btn-block ">Update </button>
+				</div>
+       </div>
+
+	
+	</form>
+	<!-- End of Email -->
+
+	<!-- Phase Two : Address -->
+
+	<form name="edit.addressForm" ng-show="edit.phase2" ng-submit="edit.updateAddress(newaddress);">
+	<div class="row"></div>
+
+	<div class="row">
+				
+					<div class="form-group input-lg">
+                        <label>Address:</label>
+
+					</div>
+					
+	<div class="col-xs-1 col-sm-4 col-md-4">
+        <input type="text" name="address" id="address" class="form-control" ng-model="newaddress" tabindex="1">
+       </div>
+
+
+       <div class="col-xs-4 col-sm-2">
+				<button type="submit" class="btn btn-theme btn-block">Update </button>
+				</div>
+       </div>
+
+	
+	</form>
+	<!-- End of Address -->
+
+	<!-- Phase 3 - Install Date -->
+
+		<form name="edit.dateForm" ng-show="edit.phase3" ng-submit="edit.updateDate(newdate);">
+	<div class="row"></div>
+
+	<div class="row">
+				
+					<div class="form-group input-lg">
+                        <label>Install Date:</label>
+
+					</div>
+					
+	<div class="col-xs-1 col-sm-4 col-md-4">
+        
+        <input id="installdate" type="text" class="form-control" ng-model="newdate" >
+
+       </div>
+
+
+       <div class="col-xs-4 col-sm-2">
+				<button type="submit" class="btn btn-theme btn-block">Update </button>
+				</div>
+       </div>
+
+	
+	</form>
+
+	<!-- End of install date -->
+
+<!-- Phase 4 - Country Code -->
+
+		<form name="edit.countryForm" ng-show="edit.phase4" ng-submit="edit.updateCountry(newcountry);">
+	<div class="row"></div>
+
+	<div class="row">
+				
+					<div class="form-group input-lg">
+                        <label>Country Code:</label>
+
+					</div>
+					
+	<div class="col-xs-1 col-sm-4 col-md-4">
+        
+        <input type="text" name="countrycode" id="countrycode" class="form-control" ng-model="newcountry" tabindex="1">
+
+       </div>
+
+
+       <div class="col-xs-4 col-sm-2">
+				<button type="submit" class="btn btn-theme btn-block">Update </button>
+				</div>
+       </div>
+
+	
+	</form>
+
+	<!-- End of Country Code -->
+
+
+	<!-- Phase 5 - Userid -->
+
+		<form name="edit.useridForm" ng-show="edit.phase5" ng-submit="edit.updateUserid(newuserid);">
+	<div class="row"></div>
+
+	<div class="row">
+				
+					<div class="form-group input-lg">
+                        <label>User ID:</label>
+
+					</div>
+					
+	<div class="col-xs-1 col-sm-4 col-md-4">
+        
+        <input type="text" name="userid" id="userid" class="form-control" ng-model="newuserid" tabindex="1">
+
+       </div>
+
+
+       <div class="col-xs-4 col-sm-2">
+				<button type="submit" class="btn btn-theme btn-block">Update </button>
+				</div>
+       </div>
+
+	
+	</form>
+
+	<!-- End of Userid -->
+
+	<!-- Phase 6 - Inverter -->
+
+		<form name="edit.inverterForm" ng-show="edit.phase6" ng-submit="edit.updateInverter(newinverter);">
+	<div class="row"></div>
+
+	<div class="row">
+				
+					<div class="form-group input-lg">
+                        <label>Inverter:</label>
+
+					</div>
+					
+	<div class="col-xs-1 col-sm-4 col-md-4">
+        
+        <input type="text" name="inverter" id="inverter" class="form-control" ng-model="newinverter" tabindex="1">
+       </div>
+
+
+       <div class="col-xs-4 col-sm-2">
+				<button type="submit" class="btn btn-theme btn-block">Update </button>
+				</div>
+       </div>
+
+	
+	</form>
+
+	<!-- End of Inverter -->
+
+
+	<!-- Phase 7 - Nameplate Capacity -->
+
+		<form name="edit.capacityForm" ng-show="edit.phase7" ng-submit="edit.updateCapacity(newcapacity);">
+	<div class="row"></div>
+
+	<div class="row">
+				
+					<div class="form-group input-lg">
+                        <label>Nameplate Capacity:</label>
+
+					</div>
+					
+	<div class="col-xs-1 col-sm-4 col-md-4">
+        
+        <input type="text" name="nameplate" id="nameplate" class="form-control" ng-model="newcapacity" tabindex="1">
+       </div>
+
+
+       <div class="col-xs-4 col-sm-2">
+				<button type="submit" class="btn btn-theme btn-block">Update </button>
+				</div>
+       </div>
+
+	
+	</form>
+
+	<!-- End of Capacity -->
+
+	<!-- Phase 8 - Latitude -->
+
+		<form name="edit.latitudeForm" ng-show="edit.phase8" ng-submit="edit.updateLatitude(newlatitude);">
+	<div class="row"></div>
+
+	<div class="row">
+				
+					<div class="form-group input-lg">
+                        <label>Latitude:</label>
+
+					</div>
+					
+	<div class="col-xs-1 col-sm-4 col-md-4">
+        
+        <input type="text" name="latitude" id="latitude" class="form-control" ng-model="newlatitude" tabindex="1">
+       </div>
+
+
+       <div class="col-xs-4 col-sm-2">
+				<button type="submit" class="btn btn-theme btn-block">Update </button>
+				</div>
+       </div>
+
+	
+	</form>
+
+	<!-- End of Latitude -->
+
+	<!-- Phase 9 - Longtitude -->
+
+		<form name="edit.longtitudeForm" ng-show="edit.phase9" ng-submit="edit.updateLongtitude(newlongtitude);">
+	<div class="row"></div>
+
+	<div class="row">
+				
+					<div class="form-group input-lg">
+                        <label>Longtitude:</label>
+
+					</div>
+					
+	<div class="col-xs-1 col-sm-4 col-md-4">
+        
+        <input type="text" name="longtitude" id="longtitude" class="form-control" ng-model="newlongtitude" tabindex="1">
+       </div>
+
+
+       <div class="col-xs-4 col-sm-2">
+				<button type="submit" class="btn btn-theme btn-block">Update </button>
+				</div>
+       </div>
+
+	
+	</form>
+
+	<!-- End of Longtitude -->
+
+   
+  <br>
+		<div class = "row show-hide-message" ng-show="edit.successMsg">
+			<div class="alert alert-success">{{edit.successMsg}}</div>
+		</div>
+
+		<br>
+
+		<div class ="row show-hide-message" ng-show="edit.errorMsg">
+			<div class="alert alert-danger">{{edit.errorMsg}}</div>
+		</div>
+
+
+	</div>
+</div>

@@ -1,0 +1,172 @@
+
+<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="breadcrumb">
+					<li><a href="#"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+					
+					<li class="active">Login</li>
+					<li class="active">Profile</li>
+					<li class="active">Register</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</section>
+<section id="content">
+<div class="row" >
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+		<form ng-submit="register.regMachine(regData);" class="register-form">
+			<h2>Please Enter Machine Details </h2>
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-5">
+					<div class="form-group input-lg">
+                        <p>Email Address:</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="form-group">
+						<input type="email" name="email" id="email" class="form-control input-lg" ng-model="register.regData.email" tabindex="1">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-5">
+					<div class="form-group input-lg">
+                        <p>Address:</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="form-group">
+						<input type="text" name="address" id="address" class="form-control input-lg" ng-model="register.regData.address" tabindex="1">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-5">
+					<div class="form-group input-lg">
+                        <p>Install Date:</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="form-group">
+						<input id="installdate" type="date" class="form-control input-lg" ng-model="register.regData.installdate">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-5">
+					<div class="form-group input-lg">
+                        <p>Country Code:</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="form-group">
+						<input type="text" name="countrycode" id="countrycode" class="form-control input-lg" ng-model="register.regData.countrycode" tabindex="1">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-5">
+					<div class="form-group input-lg">
+                        <p>User ID:</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="form-group">
+						<input type="text" name="userid" id="userid" class="form-control input-lg" ng-model="register.regData.userid" tabindex="1">
+					</div>
+				</div>
+			</div>
+
+ 			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-5">
+					<div class="form-group input-lg">
+                        <p>Inverter</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="form-group">
+						<input type="text" name="inverter" id="inverter" class="form-control input-lg" ng-model="register.regData.inverter" tabindex="1">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-5">
+					<div class="form-group input-lg">
+                        <p>Nameplate Capacity:</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="form-group">
+						<input type="text" name="nameplate" id="nameplate" class="form-control input-lg" ng-model="register.regData.nameplate" tabindex="1">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-5">
+					<div class="form-group input-lg">
+                        <p>Latitude:</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="form-group">
+						<input type="text" name="latitude" id="latitude" class="form-control input-lg" ng-model="register.regData.latitude" tabindex="1">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-5">
+					<div class="form-group input-lg">
+                        <p>Longtitude</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="form-group">
+						<input type="text" name="longtitude" id="longtitude" class="form-control input-lg" ng-model="register.regData.longtitude" tabindex="1">
+					</div>
+				</div>
+			</div>
+
+
+
+			
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6 col-md-offset-3">
+
+				<button type="submit"  class="btn btn-theme btn-block btn-lg">Register</button>
+				</div>
+				
+			</div>
+			
+<br>
+		<div class = "row show-hide-message" ng-show="register.successMsg">
+			<div class="alert alert-success">{{register.successMsg}}</div>
+		</div>
+
+		<br>
+
+		<div class ="row show-hide-message" ng-show="register.errorMsg">
+			<div class="alert alert-danger">{{register.errorMsg}}</div>
+		</div>
+		
+		</form>
+		
+	</div>
+</div>
+
+</section>
